@@ -20,5 +20,5 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: bitcoincash
+          serviceName: addrconvsvc
           servicePort: 86
