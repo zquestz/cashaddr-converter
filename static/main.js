@@ -308,11 +308,6 @@ const scenes = {
               Enter a Bitcoin Cash address below to convert it into either the new
               CashAddr format or Legacy format.
             </p>
-            <p>
-              See
-              <a href="https://www.bitcoinabc.org/cashaddr">https://www.bitcoinabc.org/cashaddr</a>
-              for more information.
-            </p>
           </div>
         </div>
       `;
