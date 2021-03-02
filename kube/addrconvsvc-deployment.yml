@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: default
+  labels:
+    service: addrconvsvc
+  name: addrconvsvc
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      service: addrconvsvc
+  template:
+    metadata:
+      labels:
+        service: addrconvsvc
+    spec:
+      containers:
+      - image: zquestz/addrconvsvc:latest
+        imagePullPolicy: Always
+        name: addrconvsvc
+        ports:
+        - containerPort: 3000
+        resources:
+          requests:
+            memory: "32Mi"
+      restartPolicy: Always
