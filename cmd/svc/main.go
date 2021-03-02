@@ -7,8 +7,8 @@ import (
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 
-	"github.com/schancel/cashaddr-converter/address"
-	"github.com/schancel/cashaddr-converter/cmd/common"
+	"github.com/zquestz/cashaddr-converter/address"
+	"github.com/zquestz/cashaddr-converter/cmd/common"
 )
 
 func main() {

@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/schancel/cashaddr-converter/baseconv"
+	"github.com/zquestz/cashaddr-converter/baseconv"
 )
 
-// FromCashAddr takes a CashAddr URI string, and returns and unpacked
+// Decode takes a CashAddr URI string, and returns and unpacked
 // RawAddress, and possible an error.
 func Decode(addr string, defaultPrefix string) (*Address, error) {
 	prefix, address := splitAddress(addr, defaultPrefix)

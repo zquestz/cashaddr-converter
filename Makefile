@@ -1,4 +1,4 @@
-PACKAGEROOT := github.com/schancel/cashaddr-converter
+PACKAGEROOT := github.com/zquestz/cashaddr-converter
 
 .PHONY: default clean addrconv svc image run
 default: addrconv svc

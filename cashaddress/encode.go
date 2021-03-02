@@ -4,10 +4,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/schancel/cashaddr-converter/baseconv"
+	"github.com/zquestz/cashaddr-converter/baseconv"
 )
 
-// ToCashAddr expects a RawAddress and a prefix, and returns the CashAddr URI,
+// Encode expects a RawAddress and a prefix, and returns the CashAddr URI,
 // and possibly an error.
 func (addr *Address) Encode() (string, error) {
 	packed, err := packAddress(addr)
