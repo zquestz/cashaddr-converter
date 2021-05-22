@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: addrconvsvc-ingress
@@ -11,14 +11,19 @@ spec:
   - hosts:
     - cashaddr.bitcoincash.org
     secretName: addrconvsvc-tls
-  backend:
-    serviceName: addrconvsvc
-    servicePort: 86
+  defaultBackend:
+    service:
+      name: addrconvsvc
+      port:
+        number: 86
   rules:
   - host: cashaddr.bitcoincash.org
     http:
       paths:
       - path: /
+        pathType: ImplementationSpecific
         backend:
-          serviceName: addrconvsvc
-          servicePort: 86
+          service:
+            name: addrconvsvc
+            port:
+              number: 86
